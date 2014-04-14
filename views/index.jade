@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+	p: input(type='button', value='Cast this shit...', id='cast-btn')
+
+	script(type='text/javascript', src='//www.gstatic.com/cv/js/sender/v1/cast_sender.js')
+	script(type='text/javascript', src='javascripts/sender.js')

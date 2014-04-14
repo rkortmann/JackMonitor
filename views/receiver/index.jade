@@ -1,0 +1,41 @@
+html
+	head
+		title JackMontior Receiver
+
+		link(rel='stylesheet', href='stylesheets/receiver.css')
+
+		script(type='text/javascript', src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+		script(type='text/javascript', src='/socket.io/socket.io.js')
+
+		script(type='text/javascript', src='javascripts/cast_receiver.js')
+		script(type='text/javascript', src='javascripts/receiver.js')
+
+		script(type='text/javascript', src='javascripts/skyfall.js')
+		script(type='text/javascript', src='javascripts/receiver_custom.js')
+	body
+		//- iframe(id='background-map', scrolling='no', frameborder='no', src='https://chartbeat.com/wrap/labs/heatmap/?host=jackthreads.com&apikey=bcea963f94ca58828bedbf8204a5d409')
+		//- iframe(id='background-map', scrolling='no', frameborder='no', src='https://chartbeat.com/wrap/labs/bigboardmosaic/?host=jackthreads.com&apikey=bcea963f94ca58828bedbf8204a5d409')
+		#container
+			#clone
+				.content-box
+					.uptime
+					.name Server name
+					.cpu-load
+						.cpu-load-bar
+						.cpu-pct
+					.load
+						.load-average 1min: 
+							span.load-time.load_1min
+						.load-average 5min: 
+							span.load-time.load_5min
+						.load-average 15min: 
+							span.load-time.load_15min
+					.memory
+			#servers
+			#chartbeat
+				.view
+					p top five pages?
+				.view
+					p current # of users on site
+				.view
+					p some other chartbeat metric
