@@ -112,7 +112,7 @@ var Skyfall = {
 	}
 	
 	, loadInfo: function(data){
-		console.log("loadInfo: " + data);
+		//console.log("loadInfo: " + data);
 
 		//this.el.find('.load').text(data.loadavg[0].toFixed(2));
 		
@@ -157,7 +157,8 @@ var Skyfall = {
 		var sys = Math.round(100 * timesAll['sys'] / (total * data.cpus.length));
 		//cpuBar.find('.cpu-pct').html((user + sys) + '%');
 		el.find('.cpu-pct').text((user + sys) + '%');
-		el.find('.cpu-load-bar').css({width: (user + sys) + '%'});
+		el.find('.cpu-load-bar').css({width: (user + sys) + '%', backgroundColor: getColor(user+sys)});
+		console.log(user+sys);
 		// el.find('.cpu-load-bar').animate({width: (user + sys) + '%'})
 		
 		// if(Skyfall._settings.animate === true){

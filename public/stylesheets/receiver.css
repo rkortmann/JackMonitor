@@ -39,11 +39,12 @@ body {
   padding-left: 0.5%;
 }
 #container #servers .content-box {
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.8);
   padding: 1em;
   width: 32%;
   margin: 5px 0.5%;
   float: left;
+  border-radius: 10px;
 }
 #container #servers .content-box .uptime {
   font-size: 10pt;
@@ -70,9 +71,13 @@ body {
   width: 100%;
   top: 0;
   bottom: 0;
-  background-color: #008000;
+  background-color: #308014;
   margin-left: -0.5em;
-  z-index: -100;
+  z-index: 50;
+}
+#container #servers .content-box .cpu-load .cpu-pct {
+  position: relative;
+  z-index: 100;
 }
 #container #servers .content-box .load {
   overflow: auto;

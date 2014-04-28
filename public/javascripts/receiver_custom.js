@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	var servers = {
-		"Web1.JT":{"address":"web1.jackthreads.com","port":3007},
+		// "Web1.JT":{"address":"web1.jackthreads.com","port":3007},
+		"Web4.JT":{"address":"web4.jackthreads.com","port":3007},
 		"PROD11.JT":{"address":"prod-jitr-11-jackthreads.jackthreads.com","port":3007},
 		"PROD12.JT":{"address":"prod-jitr-12-jackthreads.jackthreads.com","port":3007},
 		"PROD13.JT":{"address":"prod-jitr-13-jackthreads.jackthreads.com","port":3007},
@@ -9,9 +10,9 @@ $(document).ready(function() {
 		"PROD16.JT":{"address":"prod-jitr-16-jackthreads.jackthreads.com","port":3007},
 		"PROD17.JT":{"address":"prod-jitr-17-jackthreads.jackthreads.com","port":3007},
 		"PROD18.JT":{"address":"prod-jitr-18-jackthreads.jackthreads.com","port":3007},
-		// "PL01.JT":{"address":"pinnacle-large-01.jackthreads.com","port":3007},
-		// "PL02.JT":{"address":"pinnacle-large-02.jackthreads.com","port":3007},
-		// "PL03.JT":{"address":"pinnacle-large-03.jackthreads.com","port":3007},
+		"PL01.JT":{"address":"pinnacle-large-01.jackthreads.com","port":3007},
+		"PL02.JT":{"address":"pinnacle-large-02.jackthreads.com","port":3007},
+		"PL03.JT":{"address":"pinnacle-large-03.jackthreads.com","port":3007},
 		// "web1.TL":{"address":"web1.thrillist.com","port":3007},
 		// "cloud1.TL":{"address":"cloud1.thrillist.com","port":3007},
 		// "cloud2.TL":{"address":"cloud2.thrillist.com","port":3007},
@@ -38,3 +39,21 @@ $(document).ready(function() {
 		Skyfall.addServer(name, address, port);
 	}
 })
+
+// function getColor(percent) {
+// 	var R = (255*percent)/100;
+// 	var G = (255*(100-percent))/100; 
+// 	var B = 0;
+
+// 	return "rgb(" + R + "," + G + "," + B + ")";
+// }
+
+function getColor(percent) {
+	if(percent < 30) {
+		return "green";
+	}
+	if(percent < 70) {
+		return "yellow";
+	}
+	return "red";
+}
